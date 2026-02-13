@@ -1,6 +1,16 @@
 import { SkillCategory } from '../types';
 
 export const skillsData: SkillCategory[] = [
+  
+
+  {
+    name : 'Cloud',
+    skills : [
+      { name: 'AWS', level: 70 },
+      { name: 'GCP', level: 60 },
+      { name: 'Azure', level: 60 },
+    ],
+  },
   {
     name: 'Frontend Development',
     skills: [
@@ -29,13 +39,19 @@ export const skillsData: SkillCategory[] = [
     ],
   },
   {
-    name: 'Tools & Technologies',
+    name: 'Devops',
     skills: [
       { name: 'Git/GitHub', level: 90 },
       { name: 'Docker', level: 75 },
-      { name: 'AWS', level: 70 },
+      { name: 'Jenkins', level: 65 },
+      { name: 'Terraform', level: 65 },
+      { name: 'Terraform', level: 70 },
+      { name: 'Ansible', level: 65 },
+      { name: 'Kubernetes', level: 75 },
+      { name: 'ArgoCD', level: 60 },
       { name: 'CI/CD', level: 80 },
-      { name: 'Jest/Testing', level: 75 },
+      { name: 'Linux', level: 80 },
+      { name: 'Networking', level: 65 },
     ],
   },
 ];

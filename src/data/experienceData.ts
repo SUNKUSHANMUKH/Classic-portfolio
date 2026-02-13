@@ -2,25 +2,18 @@ import { ExperienceItem, EducationItem } from '../types';
 
 export const experienceData: ExperienceItem[] = [
   {
-    title: 'Full Stack Developer',
+    title: 'Devops Engineer',
     company: 'Miraki Technology',
     duration: '2025 - Present',
     description:
-      'Full Stack developer and helping clients to full fill there Needs.',
-  },
-  {
-    title: 'HR Bussiness Patner - Intern',
-    company: 'Akrivia HCM',
-    duration: '3 Months',
-    description:
-      'I have been as an intern for the company front line for the company product and making the employee structure and Company Growth.',
+      'Devops Engineer working on CI/CD pipelines, AWS, GCP and Azure cloud infrastructure, containerization with Docker and Kubernetes, and automation using Terraform and Ansible. Responsible for designing and implementing scalable, secure, and efficient cloud solutions, optimizing deployment processes, and ensuring high availability and performance of applications in production environments. Collaborating with development teams to integrate DevOps practices and tools, and continuously improving system reliability and performance.',
   },
   {
     title: 'Full Stack Developer -Intern ',
     company: 'Coursevita',
     duration: '3 Months',
     description:
-      'Build Company website and updated multiple portions in the company websites and make it responsive.',
+      'Build Company website and updated multiple portions in the company websites and make it responsive. Worked on the frontend and backend development using React, Node.js, and Express.js. Implemented new features, optimized performance, and ensured cross-browser compatibility. Collaborated with the design team to create a seamless user experience and integrated APIs for enhanced functionality. Gained hands-on experience in full stack development and contributed to the successful launch of the company website.',
   },
 ];
 

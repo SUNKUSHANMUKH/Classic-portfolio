@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
         name: 'Sunku Giridhar Shanmukh',
         email: 'sunkushanmukh@gmail.com',
         subject: 'Welcome to My Portfolio, any updates',
-        message: 'Looking for a  Fullstack developer your on the right one.. Thank you!',
+        message: 'Looking for a Devops Engineer and  Fullstack developer your on the right one.. Thank you!',
       });
       
       // Reset success message after 5 seconds

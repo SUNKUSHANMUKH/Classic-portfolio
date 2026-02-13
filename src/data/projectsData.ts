@@ -6,7 +6,7 @@ export const projectsData: Project[] = [
     title: 'Mittinrich',
     description:
       'Organic farming relies on composting, but maintaining the compost environment is challenging. The Smart Compost System automates monitoring, alerts, and maintenance, simplifying the process for households',
-    image: 'https://stackblitz.com/storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN0N6OXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--d13954fa3bc3d38aeeaaa5a1cfc0ee94571fb19c/workImgThree.jpg',
+    image: '/workImgThree.jpg',
     category: 'Robotics',
     technologies: ['React', 'Node.js', 'MongoDB', 'MP&MC', 'Sensors'],
     liveUrl: '',
@@ -18,7 +18,7 @@ export const projectsData: Project[] = [
     description:
       'MULTILINGUAL TEXT TO SPEECH CONVERTOR IS A FRAME WORK WHERE YOU CAN DIRECTLY CONVERT THE TEXT INTO THE SPEECH.',
     image:
-      'https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      '/images.jpeg',
     category: 'web',
     technologies: ['GTTS', 'Googletrans', 'Streamlit', 'JavaScript'],
     liveUrl: '',
@@ -31,7 +31,7 @@ export const projectsData: Project[] = [
     description:
       'It is used to detect the product and the review is it fake or real and detect the review is written via AI or not.',
     image:
-      'https://images.pexels.com/photos/1546168/pexels-photo-1546168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      '/download.jpeg',
     category: 'web',
     technologies: ['React', 'Next.js', 'Mongodb', 'Tailwind CSS', 'Ai'],
     liveUrl:

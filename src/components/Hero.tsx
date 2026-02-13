@@ -32,11 +32,11 @@ const Hero: React.FC = () => {
               </h1>
               <div className="space-y-6">
                 <h2 className="text-2xl md:text-3xl font-medium text-slate-700 dark:text-slate-300">
-                  Full Stack Developer & UX Designer
+                  Devops Engineer and Full Stack Developer 
                 </h2>
                 <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
                   I build exceptional digital experiences that are fast,
-                  accessible, visually appealing, and responsive. Let's create
+                  accessible, visually appealing, and responsive and depoly them in cloud. Let's create
                   something amazing together.
                 </p>
                 <div className="flex gap-6">
@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-3xl transform rotate-6"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-blue-500/20 rounded-3xl transform -rotate-6"></div>
               <img
-                src="https://stackblitz.com/storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMTRHOUE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5be96f85cf44be2c91dcb8960eebcff9b10eb1db/Shanmukh.jpg"
+                src="/shanmukh image.jpg"
                 alt="Profile"
                 className="relative rounded-3xl shadow-2xl object-cover w-full h-full transform hover:scale-105 transition-transform duration-300"
               />
