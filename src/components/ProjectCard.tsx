@@ -2,6 +2,7 @@ import React from 'react';
 import { ExternalLink, Github as GitHub } from 'lucide-react';
 import { Project } from '../types';
 
+
 interface ProjectCardProps {
   project: Project;
 }

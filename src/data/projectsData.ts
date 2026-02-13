@@ -5,7 +5,7 @@ export const projectsData: Project[] = [
     id: 1,
     title: 'Mittinrich',
     description: 'Organic farming relies on composting, but maintaining the compost environment is challenging. The Smart Compost System automates monitoring, alerts, and maintenance, simplifying the process for households',
-    image: '/workImgThree.jpg', // Make sure case matches exactly
+    image: 'src/assests/workImgThree.jpg', // Make sure case matches exactly
     category: 'Robotics',
     technologies: ['React', 'Node.js', 'MongoDB', 'MP&MC', 'Sensors'],
     liveUrl: '',
@@ -15,7 +15,7 @@ export const projectsData: Project[] = [
     id: 2,
     title: 'Text to speech convertor',
     description: 'MULTILINGUAL TEXT TO SPEECH CONVERTOR IS A FRAME WORK WHERE YOU CAN DIRECTLY CONVERT THE TEXT INTO THE SPEECH.',
-    image: '/images.jpeg', // Check case - is it images.jpeg or Images.jpeg?
+    image: 'src/assests/images.jpeg', // Check case - is it images.jpeg or Images.jpeg?
     category: 'web',
     technologies: ['GTTS', 'Googletrans', 'Streamlit', 'JavaScript'],
     liveUrl: '',
@@ -25,7 +25,7 @@ export const projectsData: Project[] = [
     id: 3,
     title: 'Fake product & Fake review detection',
     description: 'It is used to detect the product and the review is it fake or real and detect the review is written via AI or not.',
-    image: '/download.jpeg', // Check case - is it download.jpeg or Download.jpeg?
+    image: 'src/assests/download.jpeg', // Check case - is it download.jpeg or Download.jpeg?
     category: 'web',
     technologies: ['React', 'Next.js', 'Mongodb', 'Tailwind CSS', 'Ai'],
     liveUrl: 'https://stackblitz.com/edit/shanmukh-abhi-bharath-diugwkcb?file=package.json',
