@@ -1,5 +1,7 @@
 import React from 'react';
 import { Github as GitHub, Linkedin, Mail, ChevronDown } from 'lucide-react';
+import profileImage from "../assets/Shanmukh-image.jpg";
+
 
 const Hero: React.FC = () => {
   const scrollToAbout = () => {
@@ -76,7 +78,7 @@ const Hero: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-3xl transform rotate-6"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-blue-500/20 rounded-3xl transform -rotate-6"></div>
               <img
-                src="src/assests/Shanmukh-image.jpg"
+                src={profileImage}
                 alt="Profile"
                 className="relative rounded-3xl shadow-2xl object-cover w-full h-full transform hover:scale-105 transition-transform duration-300"
               />
