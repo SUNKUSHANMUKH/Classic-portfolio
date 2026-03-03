@@ -26,7 +26,9 @@ Deploys Nginx container
         ↓  
 Portfolio runs at http://localhost:3000
 ```
-
+```
+git push → GitHub → Vercel build → Live site updated
+```
 ---
 
 #  Project Structure
