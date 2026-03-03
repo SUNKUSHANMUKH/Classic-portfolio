@@ -1,12 +1,14 @@
 pipeline {
     agent any
 
-    environment {
-        NODE_VERSION = '18'
-        APP_NAME = 'portfolio'
-    }
-
     stages {
+        stage('Check Docker Access') {
+    steps {
+        sh 'whoami'
+        sh 'docker --version'
+        sh 'docker ps'
+    }
+}
 
         stage('Checkout Code') {
             steps {
@@ -14,44 +16,18 @@ pipeline {
             }
         }
 
-        stage('Install Dependencies') {
-            steps {
-                sh 'npm install'
-            }
-        }
-
-        stage('Build Portfolio') {
-            steps {
-                sh 'npm run build'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                sh 'npm test || true'
-            }
-        }
-
-        stage('Create Production Build') {
-            steps {
-                sh 'npm run build'
-            }
-        }
-
-        stage('Deploy') {
+        stage('Deploy with Docker') {
             steps {
                 sh '''
-                echo "Deploying Portfolio..."
-
-                # Stop old container if exists
+                echo "Stopping old container..."
                 docker stop portfolio-container || true
                 docker rm portfolio-container || true
 
-                # Build Docker Image
+                echo "Building new Docker image..."
                 docker build -t portfolio-image .
 
-                # Run new container
-                docker run -d -p 3000:3000 --name portfolio-container portfolio-image
+                echo "Running container..."
+                docker run -d -p 3000:80 --name portfolio-container portfolio-image
                 '''
             }
         }
@@ -62,7 +38,7 @@ pipeline {
             echo 'Portfolio deployed successfully 🚀'
         }
         failure {
-            echo 'Build failed ❌ Check logs'
+            echo 'Deployment failed ❌ Check logs'
         }
     }
 }
