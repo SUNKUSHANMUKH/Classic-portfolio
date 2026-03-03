@@ -2,32 +2,18 @@ pipeline {
     agent any
 
     stages {
-        stage('Check Docker Access') {
-    steps {
-        sh 'whoami'
-        sh 'docker --version'
-        sh 'docker ps'
-    }
-}
 
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/YOUR_USERNAME/YOUR_PORTFOLIO_REPO.git'
+                git branch: 'main', url: 'https://github.com/SUNKUSHANMUKH/Classic-portfolio.git'
             }
         }
 
-        stage('Deploy with Docker') {
+        stage('Deploy') {
             steps {
                 sh '''
-                echo "Stopping old container..."
-                docker stop portfolio-container || true
-                docker rm portfolio-container || true
-
-                echo "Building new Docker image..."
-                docker build -t portfolio-image .
-
-                echo "Running container..."
-                docker run -d -p 3000:80 --name portfolio-container portfolio-image
+                docker compose down || true
+                docker compose up --build -d
                 '''
             }
         }
