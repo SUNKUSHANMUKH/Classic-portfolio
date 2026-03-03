@@ -3,9 +3,16 @@ pipeline {
 
     stages {
 
+        stage('Verify Docker Access') {
+            steps {
+                sh 'docker --version'
+                sh 'docker ps'
+            }
+        }
+
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/SUNKUSHANMUKH/Classic-portfolio.git'
+                git branch: 'main', url: 'https://github.com/YOUR_USERNAME/YOUR_PORTFOLIO_REPO.git'
             }
         }
 
@@ -16,15 +23,6 @@ pipeline {
                 docker compose up --build -d
                 '''
             }
-        }
-    }
-
-    post {
-        success {
-            echo 'Portfolio deployed successfully 🚀'
-        }
-        failure {
-            echo 'Deployment failed ❌ Check logs'
         }
     }
 }
