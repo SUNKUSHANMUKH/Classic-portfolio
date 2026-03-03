@@ -1,4 +1,4 @@
-# 🚀 Classic Portfolio – CI/CD with Jenkins & Docker
+# Classic Portfolio – CI/CD with Jenkins & Docker
 
 This project demonstrates a complete **CI/CD pipeline** for a Vite + React portfolio application using:
 
@@ -11,7 +11,7 @@ The entire setup runs locally inside Docker and is fully automated.
 
 ---
 
-# 🧱 Architecture Overview
+# Architecture Overview
 
 ```id="arch1"
 Developer pushes code → GitHub  
@@ -29,7 +29,7 @@ Portfolio runs at http://localhost:3000
 
 ---
 
-# 📁 Project Structure
+#  Project Structure
 
 ```id="struct1"
 Classic-portfolio/
@@ -45,7 +45,7 @@ Classic-portfolio/
 
 ---
 
-# 🛠 Technologies Used
+# Technologies Used
 
 * React (Vite + TypeScript)
 * Node.js 18 (Alpine)
@@ -56,7 +56,7 @@ Classic-portfolio/
 
 ---
 
-# ⚙️ Step 1 – Clone Repository
+#  Step 1 – Clone Repository
 
 ```bash id="cmd1"
 git clone https://github.com/YOUR_USERNAME/Classic-portfolio.git
@@ -65,7 +65,7 @@ cd Classic-portfolio
 
 ---
 
-# ⚙️ Step 2 – Start Jenkins
+#  Step 2 – Start Jenkins
 
 Start Jenkins container:
 
@@ -87,7 +87,7 @@ http://localhost:8080
 
 ---
 
-# 🔐 Step 3 – Unlock Jenkins
+#  Step 3 – Unlock Jenkins
 
 Get initial admin password:
 
@@ -99,7 +99,7 @@ Paste password in browser → Install suggested plugins → Create admin user.
 
 ---
 
-# 🐳 Step 4 – Install Docker Inside Jenkins (One-Time Setup)
+# Step 4 – Install Docker Inside Jenkins (One-Time Setup)
 
 Enter Jenkins container:
 
@@ -140,7 +140,7 @@ exit
 
 ---
 
-# 🐳 Dockerfile (Multi-Stage Build)
+#  Dockerfile (Multi-Stage Build)
 
 ```dockerfile id="df1"
 FROM node:18-alpine AS builder
@@ -167,7 +167,7 @@ CMD ["nginx", "-g", "daemon off;"]
 
 ---
 
-# 🐳 docker-compose.yml (Application Deployment)
+# docker-compose.yml (Application Deployment)
 
 ```yaml id="dc1"
 services:
@@ -201,7 +201,7 @@ docker rm -f portfolio-app
 
 ---
 
-# 🤖 Jenkinsfile (CI/CD Pipeline)
+#  Jenkinsfile (CI/CD Pipeline)
 
 ```groovy id="jf1"
 pipeline {
@@ -231,7 +231,7 @@ pipeline {
 
 ---
 
-# 🧠 Why These Commands Are Used
+# Why These Commands Are Used
 
 ### `docker rm -f portfolio-app || true`
 
@@ -247,7 +247,7 @@ pipeline {
 
 ---
 
-# 🌍 Access the Application
+#  Access the Application
 
 After Jenkins build succeeds:
 
@@ -259,9 +259,9 @@ Your portfolio runs in production mode using Nginx.
 
 ---
 
-# 🧪 Common Errors & Fixes
+#  Common Errors & Fixes
 
-## 1️⃣ Docker Not Found
+##  Docker Not Found
 
 Error:
 
@@ -273,7 +273,7 @@ Fix: Install docker inside Jenkins container.
 
 ---
 
-## 2️⃣ Compose Not Found
+##  Compose Not Found
 
 Error:
 
@@ -285,7 +285,7 @@ Fix: Install `docker-compose`.
 
 ---
 
-## 3️⃣ Container Name Conflict
+##  Container Name Conflict
 
 Error:
 
@@ -301,7 +301,7 @@ docker rm -f portfolio-app
 
 ---
 
-# 🔄 CI/CD Flow Summary
+#  CI/CD Flow Summary
 
 1. Code pushed to GitHub
 2. Jenkins pulls latest commit
@@ -311,7 +311,7 @@ docker rm -f portfolio-app
 
 ---
 
-# 📈 DevOps Concepts Demonstrated
+# DevOps Concepts Demonstrated
 
 * CI/CD Automation
 * Multi-Stage Docker Build
@@ -322,7 +322,7 @@ docker rm -f portfolio-app
 
 ---
 
-# 🚀 Future Enhancements
+# Future Enhancements
 
 * Add automated testing stage
 * Push Docker image to Docker Hub
@@ -332,7 +332,7 @@ docker rm -f portfolio-app
 
 ---
 
-# ✅ Conclusion
+#  Conclusion
 
 This project demonstrates a complete local CI/CD workflow integrating Jenkins and Docker to automate build and deployment of a React production application.
 
