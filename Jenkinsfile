@@ -3,12 +3,14 @@ pipeline {
 
     stages {
         stage('Build & Deploy') {
-            steps {
-                sh '''
-                docker-compose down || true
-                docker-compose up --build -d
-                '''
-            }
+           stage('Build & Deploy') {
+    steps {
+        sh '''
+        docker rm -f portfolio-app || true
+        docker-compose up --build -d
+        '''
+    }
+}
         }
     }
 }
