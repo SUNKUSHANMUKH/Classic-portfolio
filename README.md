@@ -305,11 +305,11 @@ docker rm -f portfolio-app
 
 # Use Vercel CLI Inside Jenkins
 
-# Install Vercel CLI inside Jenkins container:
+Install Vercel CLI inside Jenkins container:
 
 ```npm install -g vercel```
 
-# Then inside Jenkinsfile:
+Then inside Jenkinsfile:
 
 ```
 stage('Deploy to Vercel') {
