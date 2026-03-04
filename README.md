@@ -1,4 +1,4 @@
-# Classic Portfolio – CI/CD with Jenkins & Docker
+# Classic Portfolio – CI/CD with Jenkins & Docker & Vercel 
 
 This project demonstrates a complete **CI/CD pipeline** for a Vite + React portfolio application using:
 
@@ -300,6 +300,43 @@ Fix:
 ```bash id="cmd14"
 docker rm -f portfolio-app
 ```
+
+---
+
+# Use Vercel CLI Inside Jenkins
+
+# Install Vercel CLI inside Jenkins container:
+
+```npm install -g vercel```
+
+# Then inside Jenkinsfile:
+
+```
+stage('Deploy to Vercel') {
+    steps {
+        sh '''
+        vercel --prod --token=$VERCEL_TOKEN
+        '''
+    }
+}
+````
+You would store VERCEL_TOKEN in Jenkins credentials.
+
+Now Jenkins triggers Vercel deployment.
+
+That is real CD.
+
+For your local machine:
+
+Use:
+```
+npx vercel
+```
+For Jenkins:
+```
+Use npx vercel inside pipeline.
+```
+Avoid sudo npm install -g unless absolutely necessary.
 
 ---
 
